@@ -1,0 +1,13 @@
+/*
+## point ;
+*/
+
+
+struct _point_{
+	int x;
+	int y;
+};
+
+typedef struct _point_ Point; 
+
+Point createPoint(int,int);

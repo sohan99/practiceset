@@ -1,0 +1,12 @@
+struct _line_{
+	int x1;
+	int y1;
+	int x2;
+	int y2;
+};
+
+typedef struct _line_ Line;
+
+Line createLine(int,int,int,int);
+
+int checkLine(Line);
