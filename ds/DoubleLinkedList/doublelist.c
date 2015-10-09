@@ -14,8 +14,10 @@ typedef struct _node_ Node;
 
 Node * insertNodeAtFront(Node *,int);
 Node * insertNodeAtEnd(Node *, int);
+Node * insertNodeAtPos(Node * head,unsigned int, int );
 Node * deleteAtTheEnd(Node *);
 Node * deleteAtTheFront(Node *);
+
 Node * allocateMemory();
 
 
@@ -51,6 +53,9 @@ int main(){
 	assert(head->front->front->front == NULL);
 	assert(head->front->front->value == 30);
 
+	
+
+
 	head = deleteAtTheEnd(head);
 	assert(head->front->front == NULL);
 	assert(head->front->rear == head);
@@ -66,6 +71,20 @@ int main(){
 	head = insertNodeAtEnd(head, 30);
 	head = deleteAtTheEnd(head);
 	assert(head == NULL);
+
+
+	head = insertNodeAtPos(head,2,20);
+
+	head = insertNodeAtEnd(head, 10);
+	head = insertNodeAtEnd(head, 20);
+	//head = insertNodeAtEnd(head, 30);
+	head = insertNodeAtPos(head,2,25);// there are 3 elemnts in this point 
+	head = insertNodeAtPos(head,4,40);
+
+	assert(head->value == 10);
+	assert(head->front->value == 25);
+	assert(head->front->front->value == 20);
+	assert(head->front->front->front->value == 40);
 
 
 
@@ -155,5 +174,33 @@ Node * deleteAtTheFront(Node * head){
 			head->rear = NULL;
 		}
 	}
+	return head;
+}
+
+Node * insertNodeAtPos(Node * head,unsigned int pos, int value){
+	/* this finction allows you to add at position on 0 and n+1  */
+	Node *temp = head;
+	Node *newNode = NULL;
+	int i = 2;
+	if(head != NULL){
+		if( pos == 0 || pos == 1 ){
+			newNode = allocateMemory();
+			newNode->value = value;
+			newNode->front = head;
+			head->rear = newNode;
+		}
+		else {
+			for(;i<pos && (temp->front != NULL);i++,temp=temp->front);
+			if(i == pos){
+				newNode = allocateMemory();
+				newNode->value = value;
+				newNode->front = temp->front;
+				newNode->rear = temp;
+				temp->front = newNode;
+				printf("here");
+			}
+		}
+	}
+
 	return head;
 }
