@@ -1,0 +1,13 @@
+compile the code
+javac -d com src/dbcon/DBConnection.java
+
+
+to run the package..
+java -cp com/lib/*:. com.Test
+
+
+
+
+
+
+
