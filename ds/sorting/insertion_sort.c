@@ -12,16 +12,16 @@ int main(){
 
 	insertion_sort_desc(a,6);
 	for(i=0;i<5;i++)
-		assert(a[i] < a[i+1]);
+		assert(a[i] > a[i+1]);
 
 	insertion_sort_asc(a,6);
 	for(i=0;i<5;i++)
-		assert(a[i] > a[i+1]);
+		assert(a[i] < a[i+1]);
 
 	return 0;
 }
 
-void insertion_sort_desc(int a[],int n){
+void insertion_sort_asc(int a[],int n){
 
 	//if(arr == NULL)return 0;
 
@@ -40,7 +40,7 @@ void insertion_sort_desc(int a[],int n){
 	}
 }
 
-void insertion_sort_asc(int a[],int n){
+void insertion_sort_desc(int a[],int n){
 
 	//if(arr == NULL)return 0;
 
