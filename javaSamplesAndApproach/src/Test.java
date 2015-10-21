@@ -1,5 +1,5 @@
-package com;
-import com.db.*;
+
+import com.db.DBConnection*;
 import java.sql.*;
 
 
@@ -16,23 +16,16 @@ public class Test {
 			ResultSet resultset;
 			Statement statement = db.conn.createStatement();
 			resultset=statement.executeQuery("select * from test");
-			       
 			while(resultset.next())
 			{ 
 			     System.out.println(resultset.getString("role"));
 			}
 		}
 		catch(Exception e){
-			System.ot.println("error : "+e)
-
+			System.out.println("error : "+e);
 		}
-		finally(){
-			db.closeDB
-
+		finally{
+			db.closeDB();
 		}
-
 	}
-
-
-
 }

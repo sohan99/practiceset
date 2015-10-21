@@ -7,7 +7,7 @@ import java.util.Properties;
 
 public class DBConnection
 {
-	private Connection conn = null;	
+	public Connection conn = null;	
 	private String IP_ADDRESS_PORT = "";
 	private String URL = "";
 	private String CLASS_NAME = "";
