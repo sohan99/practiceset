@@ -1,4 +1,5 @@
 #include <assert.h>
+#include<stdio.h>
 
 void swap(int a, int b);
 void quicksort(int arr[], int start, int end);
@@ -7,13 +8,16 @@ int partition(int arr[], int start, int end);
 
 int main(){
 
-	int arr[6] = {1,2,4,3,6,5};
+	int arr[6] = {1,9,2,8,3,7};
 	int i;
 
 	quicksort(arr,0,5);
 
-	for(i=0;i<5;i++)
+	for(i=0;i<5;i++){
 		assert(arr[i]<arr[i+1]);
+		printf(" %d ",arr[i]);
+	}
+	printf(" %d  ",arr[i]);
 
 	return 0;
 }
@@ -47,6 +51,7 @@ int partition(int arr[], int start, int end){
 
 	}
 	//swap the pivot element to its position
+
 	temp = arr[pindex];
 	arr[pindex] = arr[end];
 	arr[end] = temp;

@@ -5,7 +5,7 @@ void selection_sort_asc(int [], int );
 
 int main(){
 
-	int arr[6] = {2,1,3,5,6,4};
+	int arr[6] = {6,5,4,3,2,1};
 	int i;
 	selection_sort_asc(arr,6);
 	for(i=0;i<5;i++){
