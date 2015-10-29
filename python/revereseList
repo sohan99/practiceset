@@ -1,0 +1,16 @@
+'''Implement a python code to move the elements in 
+the following: Index[first] movie to index[last],
+ index[first+1] to index[last-1] and son on till mid is reached.'''
+
+
+ def reverseList(listVal):
+ 	int length = len(listVal);
+ 	for i in listVal:
+ 		print i
+
+
+
+
+
+if __name__ == "__main__":
+	reverseList([1,2,3,4,5])
