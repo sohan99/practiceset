@@ -1,4 +1,4 @@
-package com.db;
+package db;
 
 import java.io.FileInputStream;
 import java.io.InputStream;
@@ -21,13 +21,13 @@ public class DBConnection
 	public DBConnection()
 	{	
 		try {			
-			InputStream is = new FileInputStream("com/db_details/dbConnection.properties");
+			InputStream is = new FileInputStream("db_details/dbConnection.properties");
 			Properties props = new Properties();
 			props.load(is);
 			
 			this.IP_ADDRESS_PORT = (String)props.get("IP_ADDRESS_PORT");
 			this.URL 			= (String)props.get("URL");
-			this.CLASS_NAME 		= (String)props.get("CLASS_NAME");
+			this.CLASS_NAME 	= (String)props.get("CLASS_NAME");
 			this.DATABASE_NAME	= (String)props.get("DATABASE_NAME");
 			this.USERNAME 		= (String)props.get("USERNAME");
 			this.PASSWORD 		= (String)props.get("PASSWORD");			
