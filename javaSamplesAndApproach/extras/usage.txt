@@ -2,12 +2,31 @@ set class path to the folder or use java -cp to compile
 export CLASSPATH=/home/ssp/practiceset/javaSamplesAndApproach/com/lib/*:$CLASSPATH
 
 
-compile the code
-javac -d com src/dbcon/DBConnection.java
+———— new —————
+go to com folder
+complile the following
+in order 
+javac -cp lib/*:. -d . ../src/dbcon/DBConnection.java 
+javac -cp lib/*:. -d . ../src/Test.java
+javac -cp lib/*:. -d . ../src/dbcon/TableHandler.java
+javac -cp lib/*:. -d . ../src/daycarecenter/InputHandlerTable.java
 
 
-to run the package..
-java -cp com/lib/*:. com.Test
+
+-----------
+
+to run the program 
+java -cp lib/*:. daycarecenter.Test
+javac -cp lib/*:. -d . ../src/daycarecenter/FrontController.java 
+
+
+
+
+
+
+
+
+
 
 
 
