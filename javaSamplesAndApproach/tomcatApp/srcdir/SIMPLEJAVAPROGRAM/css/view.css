@@ -1,0 +1,103 @@
+
+html{
+	height:100%;
+	width:100%;
+    overflow: hidden;
+
+}
+
+body{
+	height:100%;
+	width:98%;
+}
+
+
+
+
+.title{
+	padding: 1%;
+
+}
+
+.contentView{
+
+	height:100%;
+	width:100%;
+}
+.contentView #gbox_list2 {
+	width:100%;
+	font-size: 10px !important;
+    font-family: sans-serif !important;
+    color: #333333 !important;
+}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+    border: 1px solid #cccccc;
+   /* background: #f6f6f6 url(images/ui-bg_glass_100_f6f6f6_1x400.png) 50% 50% repeat-x;*/
+    background: #CCCCCC;
+    font-size: 14px;
+    font-family: sans-serif;
+    font-weight: 300;
+    color: #000000;
+}
+
+.ui-widget-content {
+    border: 1px solid #dddddd;
+    /*background: #eeeeee url(images/ui-bg_highlight-soft_100_eeeeee_1x100.png) 50% top repeat-x;*/
+    color: #333333;
+    font-size: 12px;
+    font-family: sans-serif;
+    font-weight: 300;
+    color: #000000;
+}
+
+.ui-widget-content .ui-icon {
+}
+.ui-state-default .ui-icon{
+	color: #333333;
+    font-size: 12px;
+    font-family: sans-serif;
+    font-weight: 300;
+    color: #000000;
+}
+
+.overlay_input{
+    height:50%;
+    width:100%;
+    position:absolute;
+    background-color:#FFFFFF;
+}
+
+.ui-widget-header {
+    border: 1px solid #333333;
+    background: #363636;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+
+.input_div{
+    width:100%;
+    height:100%;
+}
+
+.input_div label {
+    width: 28%;
+    height: auto;
+    display: inline-block;
+    margin-left: 10%;
+    margin-top: 1%;
+
+}
+.input_div input, .input_div select {
+    width:45%;
+    height:auto;
+}
+
+.button{
+    width:30px:height:15px;
+    background-color:#002050;
+    color:#FFFFFF;
+    border:0;
+    margin-left: 39%;
+    margin-top:4%;
+}

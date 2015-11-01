@@ -1,0 +1,732 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+ Licensed to the Apache Software Foundation (ASF) under one or more
+  contributor license agreements.  See the NOTICE file distributed with
+  this work for additional information regarding copyright ownership.
+  The ASF licenses this file to You under the Apache License, Version 2.0
+  (the "License"); you may not use this file except in compliance with
+  the License.  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+   version="2.5">
+
+    <display-name>Welcome to Tomcat</display-name>
+
+    <description>
+   	Welcome to Tomcat
+    </description>
+
+
+
+	<welcome-file-list>
+		<welcome-file>welcome.html</welcome-file>
+	</welcome-file-list>
+
+	<!--<servlet>
+		<servlet-name>ServletInitializer</servlet-name>
+		<servlet-class>dataaccesspackage.ServletInitializer</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	 </servlet>-->
+<!--session
+	<servlet>
+		<servlet-name>LoginValidation</servlet-name>
+		<servlet-class>recon_report.servlets.LoginValidation</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>LoginValidation</servlet-name>
+		<url-pattern>/LoginValidation.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>AssignModule</servlet-name>
+		<servlet-class>AssignModule</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>AssignModule</servlet-name>
+		<url-pattern>/AssignModule.do</url-pattern>
+	</servlet-mapping>
+-->	
+
+	<servlet>
+	<servlet-name>Welcome</servlet-name>
+	<servlet-class>recon_report.servlets.Welcome</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+	<servlet-name>Welcome</servlet-name>
+	<url-pattern>/Welcome.do</url-pattern>
+	</servlet-mapping>
+
+<!--Added in FrontControllerServlet.java  
+	<servlet>
+	<servlet-name>ConnectToDB</servlet-name>
+	<servlet-class>recon_report.model.ConnectToDB</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+	<servlet-name>ConnectToDB</servlet-name>
+	<url-pattern>/ConnectToDB.do</url-pattern>
+	</servlet-mapping>
+
+       
+	<servlet>
+	<servlet-name>RangeUI</servlet-name>
+	<servlet-class>recon_report.servlets.RangeUI</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+	<servlet-name>RangeUI</servlet-name>
+	<url-pattern>/RangeUI.do</url-pattern>
+	</servlet-mapping>		
+	
+	<servlet>
+	<servlet-name>ExportReports</servlet-name>
+	<servlet-class>recon_report.servlets.ExportReports</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+	<servlet-name>ExportReports</servlet-name>
+	<url-pattern>/ExportReports.do</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+	<servlet-name>ExportReportAlerts</servlet-name>
+	<servlet-class>recon_report.servlets.ExportReportAlerts</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+	<servlet-name>ExportReportAlerts</servlet-name>
+	<url-pattern>/ExportReportAlerts.do</url-pattern>
+	</servlet-mapping>	
+	
+	<servlet>
+	<servlet-name>ExportReportsAlerts</servlet-name>
+	<servlet-class>recon_report.servlets.ExportReportsAlerts</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+	<servlet-name>ExportReportsAlerts</servlet-name>
+	<url-pattern>/ExportReportsAlerts.do</url-pattern>
+	</servlet-mapping>
+		
+	<servlet>
+	<servlet-name>GenerateReport</servlet-name>
+	<servlet-class>recon_report.servlets.GenerateReport</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+	<servlet-name>GenerateReport</servlet-name>
+	<url-pattern>/GenerateReport.do</url-pattern>
+	</servlet-mapping>	
+	
+	<servlet>
+	<servlet-name>CreateSimpleTable</servlet-name>
+	<servlet-class>recon_report.servlets.CreateSimpleTable</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+	<servlet-name>CreateSimpleTable</servlet-name>
+	<url-pattern>/CreateSimpleTable.do</url-pattern>
+	</servlet-mapping>		
+
+	<servlet>
+	<servlet-name>QueryRepository</servlet-name>
+	<servlet-class>recon_report.model.QueryRepository</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+	<servlet-name>QueryRepository</servlet-name>
+	<url-pattern>/QueryRepository.do</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+	<servlet-name>HomeSubscriber</servlet-name>
+	<servlet-class>recon_report.servlets.HomeSubscriber</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+	<servlet-name>HomeSubscriber</servlet-name>
+	<url-pattern>/HomeSubscriber.do</url-pattern>
+	</servlet-mapping>	
+
+	<servlet>
+	<servlet-name>PopulateLeftTree</servlet-name>
+	<servlet-class>recon_report.servlets.PopulateLeftTree</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+	<servlet-name>PopulateLeftTree</servlet-name>
+	<url-pattern>/PopulateLeftTree.do</url-pattern>
+	</servlet-mapping>	
+	
+	<servlet>
+	<servlet-name>CreateReport</servlet-name>
+	<servlet-class>recon_report.servlets.CreateReport</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+	<servlet-name>CreateReport</servlet-name>
+	<url-pattern>/CreateReport.do</url-pattern>
+	</servlet-mapping>
+        
+	
+	<servlet-mapping>
+	<servlet-name>CreateReport</servlet-name>
+	<url-pattern>/DashboardHtmlFiles/CreateReport.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+	<servlet-name>CreateReport</servlet-name>
+	<url-pattern>/myview/CreateReport.do</url-pattern>
+	</servlet-mapping>
+
+        
+	<servlet>
+	<servlet-name>CreateSimpleTableWOC</servlet-name>
+	<servlet-class>recon_report.servlets.CreateSimpleTableWOC</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+	<servlet-name>CreateSimpleTableWOC</servlet-name>
+	<url-pattern>/CreateSimpleTableWOC.do</url-pattern>
+	</servlet-mapping>	
+
+	<servlet>
+	<servlet-name>QueryRepositoryWOC</servlet-name>
+	<servlet-class>recon_report.model.QueryRepositoryWOC</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+	<servlet-name>QueryRepositoryWOC</servlet-name>
+	<url-pattern>/QueryRepositoryWOC.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+	<servlet-name>UserManagementOperations</servlet-name>
+	<servlet-class>recon_report.servlets.UserManagementOperations</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+	<servlet-name>UserManagementOperations</servlet-name>
+	<url-pattern>/UserManagementOperations.do</url-pattern>
+	</servlet-mapping>	
+	
+	<servlet>
+	<servlet-name>ReportOperations</servlet-name>
+	<servlet-class>recon_report.servlets.ReportOperations</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+	<servlet-name>ReportOperations</servlet-name>
+	<url-pattern>/ReportOperations.do</url-pattern>
+	</servlet-mapping>	
+	
+	<servlet>
+	<servlet-name>CreateXML</servlet-name>
+	<servlet-class>recon_report.servlets.CreateXML</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+	<servlet-name>CreateXML</servlet-name>
+	<url-pattern>/CreateXML.do</url-pattern>
+	</servlet-mapping>	
+	
+	<servlet>
+	<servlet-name>CreateDashboardOperations</servlet-name>
+	<servlet-class>recon_report.servlets.CreateDashboardOperations</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+	<servlet-name>CreateDashboardOperations</servlet-name>
+	<url-pattern>/CreateDashboardOperations.do</url-pattern>
+	</servlet-mapping>		
+	
+	<servlet>
+	<servlet-name>CreateJsonData</servlet-name>
+	<servlet-class>recon_report.servlets.CreateJsonData</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+	<servlet-name>CreateJsonData</servlet-name>
+	<url-pattern>/CreateJsonData.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+	<servlet-name>DashboardOperations</servlet-name>
+	<servlet-class>recon_report.servlets.DashboardOperations</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+	<servlet-name>DashboardOperations</servlet-name>
+	<url-pattern>/DashboardOperations.do</url-pattern>
+	</servlet-mapping>				
+
+	<servlet>
+	<servlet-name>UserPermissions</servlet-name>
+	<servlet-class>recon_report.servlets.UserPermissions</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+	<servlet-name>UserPermissions</servlet-name>
+	<url-pattern>/UserPermissions.do</url-pattern>
+	</servlet-mapping>	
+        
+        <servlet>
+	<servlet-name>CreateReportOperations</servlet-name>
+	<servlet-class>recon_report.servlets.CreateReportOperations</servlet-class>
+	</servlet>
+        
+	<servlet-mapping>
+	<servlet-name>CreateReportOperations</servlet-name>
+	<url-pattern>/CreateReportOperations.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+	<servlet-name>CreateReportOperations</servlet-name>
+	<url-pattern>/DashboardHtmlFiles/CreateReportOperations.do</url-pattern>
+	</servlet-mapping>
+
+-->
+
+<!--START REPORT VIEW-->
+     <servlet>
+        <servlet-name>ExportReportforED</servlet-name>
+        <servlet-class>ExecutiveAndRAHealthCheck.ExportReportforED</servlet-class>
+ </servlet>
+    <servlet-mapping>
+        <servlet-name>ExportReportforED</servlet-name>
+        <url-pattern>*.ExportReportforED</url-pattern>
+    </servlet-mapping>
+    
+	<servlet>
+	<servlet-name>ValidateLoginSession</servlet-name>
+	<servlet-class>FrontControllerServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+	<servlet-name>ValidateLoginSession</servlet-name>
+	<url-pattern>/welcome.html</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+	<servlet-name>eras</servlet-name>
+	<servlet-class>FrontControllerServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+	<servlet-name>eras</servlet-name>
+	<url-pattern>*.eras</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+	<servlet-name>eras</servlet-name>
+	<url-pattern>*.do</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+	<servlet-name>eras</servlet-name>
+	<url-pattern>*.audit</url-pattern>
+	</servlet-mapping>
+
+
+    <!--servlet>
+        <servlet-name>RechargeAssuranceCheck</servlet-name>
+        <servlet-class>ExecutiveAndRAHealthCheck.RechargeAssuranceCheck</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>RechargeAssuranceCheck</servlet-name>
+        <url-pattern>*.RechargeAssuranceCheck</url-pattern>
+    </servlet-mapping -->
+    
+    <!--servlet>
+        <servlet-name>CDRSummary</servlet-name>
+        <servlet-class>ExecutiveAndRAHealthCheck.CDRSummary</servlet-class>
+    </servlet-->
+
+    <servlet-mapping>
+        <servlet-name>eras</servlet-name>
+        <url-pattern>*.CDRSummary</url-pattern>
+    </servlet-mapping>
+    
+<!--servlet>
+        <servlet-name>RaHealthChkRoaming</servlet-name>
+        <servlet-class>ExecutiveAndRAHealthCheck.RaHealthChkRoaming</servlet-class>
+    </servlet-->
+
+    <servlet-mapping>
+        <servlet-name>eras</servlet-name>
+        <url-pattern>*.RaHealthChkRoaming</url-pattern>
+    </servlet-mapping>   
+    
+<!--servlet>
+        <servlet-name>RaHealthChkData</servlet-name>
+        <servlet-class>ExecutiveAndRAHealthCheck.RaHealthChkData</servlet-class>
+    </servlet-->
+
+    <servlet-mapping>
+        <servlet-name>eras</servlet-name>sssss
+        <url-pattern>*.RaHealthChkData</url-pattern>
+    </servlet-mapping>    
+	
+<!--servlet>
+        <servlet-name>Executivedashboardnew</servlet-name>
+        <servlet-class>ExecutiveAndRAHealthCheck.Executivedashboardnew</servlet-class>
+    </servlet-->
+
+    <servlet-mapping>
+        <servlet-name>eras</servlet-name>
+        <url-pattern>*.Executivedashboardnew</url-pattern>
+    </servlet-mapping>	
+    
+ 
+
+
+<!--
+	<servlet>
+	<servlet-name>DashboardActions</servlet-name>
+	<servlet-class>recon_report.servlets.DashboardAction</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+	<servlet-name>DashboardActions</servlet-name>
+	<url-pattern>/DashboardActions.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+	<servlet-name>getReportsData</servlet-name>
+	<servlet-class>recon_report.servlets.DataForReportPage</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+	<servlet-name>getReportsData</servlet-name>
+	<url-pattern>/getReportsData.do</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+	<servlet-name>SaveRules</servlet-name>
+	<servlet-class>rulesAndKPI.RulesAndKPI</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+	<servlet-name>SaveRules</servlet-name>
+	<url-pattern>/SaveRules.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+	<servlet-name>RuleMapping</servlet-name>
+	<servlet-class>rulesAndKPI.RulesMapping</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+	<servlet-name>RuleMapping</servlet-name>
+	<url-pattern>/RuleMapping.do</url-pattern>
+	</servlet-mapping>
+
+-->
+<!--END REPORT VIEW-->
+
+
+
+
+
+
+<!--predefined reports-->
+     <servlet-mapping>
+        <servlet-name>eras</servlet-name>
+        <url-pattern>*.mediation</url-pattern>
+    </servlet-mapping>  
+
+    <servlet-mapping>
+        <servlet-name>eras</servlet-name>
+        <url-pattern>*.CdrM</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>eras</servlet-name>
+        <url-pattern>*.Piechart1</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>eras</servlet-name>
+        <url-pattern>*.Piechart2dril</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet-mapping>
+        <servlet-name>eras</servlet-name>
+        <url-pattern>*.Peak1</url-pattern>
+    </servlet-mapping>
+    
+
+    <servlet-mapping>
+        <servlet-name>eras</servlet-name>
+        <url-pattern>*.Peak2</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>eras</servlet-name>
+        <url-pattern>*.Peak3</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>eras</servlet-name>
+        <url-pattern>*.Peak4</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>eras</servlet-name>
+        <url-pattern>*.Peak5</url-pattern>
+    </servlet-mapping>
+    
+-----------------------------------------------------------------------------------    
+
+    <servlet-mapping>
+        <servlet-name>eras</servlet-name>
+        <url-pattern>*.Moutrend</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet-mapping>
+        <servlet-name>eras</servlet-name>
+        <url-pattern>*.Moutrenddrill</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>eras</servlet-name>
+        <url-pattern>*.PrepaidCallVolumeTrendArea</url-pattern>
+    </servlet-mapping>   
+
+    <servlet-mapping>
+        <servlet-name>eras</servlet-name>
+        <url-pattern>*.PrepaidCallVolumeTrendpie</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>eras</servlet-name>
+        <url-pattern>*.PrepaidCallVolumeTrendpiedrill</url-pattern>
+    </servlet-mapping>   
+
+    <servlet-mapping>
+        <servlet-name>eras</servlet-name>
+        <url-pattern>*.Prepaidpeak1</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>eras</servlet-name>
+        <url-pattern>*.Prepaidpeak2</url-pattern>
+    </servlet-mapping>
+    
+
+    <servlet-mapping>
+        <servlet-name>eras</servlet-name>
+        <url-pattern>*.Prepaidpeak3</url-pattern>
+    </servlet-mapping>  
+
+    <servlet-mapping>
+        <servlet-name>eras</servlet-name>
+        <url-pattern>*.Prepaidpeak4</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>eras</servlet-name>
+        <url-pattern>*.Prepaidpeak5</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>eras</servlet-name>
+        <url-pattern>*.Prepaidtoptencells</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>eras</servlet-name>
+        <url-pattern>*.Prepaidtoptenrevenuebreakdown</url-pattern>
+    </servlet-mapping>   
+
+    <servlet-mapping>
+        <servlet-name>eras</servlet-name>
+        <url-pattern>*.Frequencymain</url-pattern>
+    </servlet-mapping>
+    
+
+    <servlet-mapping>
+        <servlet-name>eras</servlet-name>
+        <url-pattern>*.Frequencybuble</url-pattern>
+    </servlet-mapping>
+    
+------------------------------sohan------------------    
+
+    <servlet-mapping>
+        <servlet-name>eras</servlet-name>
+        <url-pattern>*.TrendingRevenuepiedrill</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>eras</servlet-name>
+        <url-pattern>*.TrendingRevenuepie</url-pattern>
+    </servlet-mapping>  
+
+    <servlet-mapping>
+        <servlet-name>eras</servlet-name>
+        <url-pattern>*.TrendingRevenueArea</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>eras</servlet-name>
+        <url-pattern>*.Tapoutbar</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>eras</servlet-name>
+        <url-pattern>*.Tapoutbardrill</url-pattern>
+    </servlet-mapping>     
+
+    <servlet-mapping>
+        <servlet-name>eras</servlet-name>
+        <url-pattern>*.Tapoutpiedril1</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>eras</servlet-name>
+        <url-pattern>*.Tapoutpiedril2</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>eras</servlet-name>
+        <url-pattern>*.TapInRoaming</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>eras</servlet-name>
+        <url-pattern>*.TapInRoamingCallTypePieDrillDown</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>eras</servlet-name>
+        <url-pattern>*.TapInRoamingRp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>eras</servlet-name>
+        <url-pattern>*.RechargeVsDenomination</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>eras</servlet-name>
+        <url-pattern>*.MonthlyRechargeTrend</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>eras</servlet-name>
+        <url-pattern>*.BreakDownHomeAndRoaming</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>eras</servlet-name>
+        <url-pattern>*.TrendingOfRevenues</url-pattern>
+    </servlet-mapping>
+------------------------sohan---------    
+
+    <servlet-mapping>
+        <servlet-name>eras</servlet-name>
+        <url-pattern>*.FrequencyPie</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>eras</servlet-name>
+        <url-pattern>*.FrequencyPiechart</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>eras</servlet-name>
+        <url-pattern>*.MediationDrillCallVolumevarience</url-pattern>
+    </servlet-mapping>  
+
+    <servlet-mapping>
+        <servlet-name>eras</servlet-name>
+        <url-pattern>*.MediationCallCategoryDrilldown</url-pattern>
+    </servlet-mapping>    
+
+    <servlet-mapping>
+        <servlet-name>eras</servlet-name>
+        <url-pattern>*.MediationDrillTrendOfHourWise</url-pattern>
+    </servlet-mapping>
+   
+    <servlet-mapping>
+        <servlet-name>eras</servlet-name>
+        <url-pattern>*.Rejectedcdr</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>eras</servlet-name>
+        <url-pattern>*.FrequencySplitDurationpi</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet-mapping>
+        <servlet-name>eras</servlet-name>
+        <url-pattern>*.TrendingOfRevenuesjson</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>eras</servlet-name>
+        <url-pattern>*.In_RevenueByCallCategory</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>eras</servlet-name>
+        <url-pattern>*.In_RevenueByCallType</url-pattern>
+    </servlet-mapping>
+    
+    
+   <!--  <servlet-mapping>
+        <servlet-name>ReconciliationReport</servlet-name>
+        <url-pattern>/getReconciliationReportsData.do</url-pattern>
+    </servlet-mapping>
+    
+     <servlet>
+       <servlet-name>ReconciliationReport</servlet-name>
+        <servlet-class>recon_report.servlet.ReconciliationReport</servlet-class>
+    </servlet>-->               
+    
+    <servlet-mapping>
+        <servlet-name>eras</servlet-name>
+        <url-pattern>/Sub_recon.eras</url-pattern>
+    </servlet-mapping>	
+
+    <servlet-mapping>
+        <servlet-name>eras</servlet-name>
+        <url-pattern>/ExportToExcel.do</url-pattern>
+    </servlet-mapping>       	
+
+    <servlet-mapping>
+        <servlet-name>eras</servlet-name>
+        <url-pattern>*.CreateDashboardnew</url-pattern>
+    </servlet-mapping>
+    
+ 
+     <!--<servlet>
+        <servlet-name>AuditTrialServlet</servlet-name>
+        <servlet-class>AuditTrialServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AuditTrialServlet</servlet-name> 
+        <url-pattern>*.audit</url-pattern>
+    </servlet-mapping> -->
+        
+</web-app>  
