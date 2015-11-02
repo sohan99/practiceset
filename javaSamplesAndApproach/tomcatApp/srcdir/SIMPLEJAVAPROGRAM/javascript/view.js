@@ -38,6 +38,7 @@ function drwgrid_chart(ID,pager,obje,menuItem_1,colname_1,caption,val){
   //pager2_center
 
   $("#pager2_center").html("<Button onclick=\"viewInputBox("+val+");\"> insert tuples </button>");
+  $("#pager2_left").html("");
 
 }
     
@@ -108,15 +109,22 @@ function viewInputBox( pageId ){
   $('#input_details3').hide();
   if(pageId == 1){
     $('#input_details1').show();
+    // h = $('#input_details1').height()
+    $( '#PateientDeiailsInID' ).height("55%");
   }
   else if(pageId == 2){
     $('#input_details2').show();
+    $( '#PateientDeiailsInID' ).height("34%");
+    // h = $('#input_details2').height()
   }
   else if(pageId == 3){
     $('#input_details3').show();
+    $( '#PateientDeiailsInID' ).height("34%");
+    // h = $('#input_details3').height()
   }
+ 
   $('#PateientDeiailsInID').toggle();
-
+  
 }
 
 
