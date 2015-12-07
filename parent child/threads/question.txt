@@ -1,0 +1,24 @@
+
+1.      Forking a child process and making the child process execute a program.
+ 
+The program may be  related to working  with  array, matrix, files  or string manipulations. (eg:- finding row sum/column sum of a matrix, changing cases of a character string, counting for character occurance in a string, finding the sum of digits of a given number,  counting for words in a file, counting for white spaces(blanks, tabs or newlines) in a file etc.)
+Hint:- Write the program(code of the child process) in a separate file, compile and create its exe. Invoke this file name in the exec command.
+ 
+2.      Creating one or more threads and making the different threads perform different computations. The  threads  may be  working  with numbers,  arrays, matrices, files  or  performing string manipulations etc. Hint:-  Use pthread library function for creating threads and running them.
+ 
+3.      Create a common shared memory area where in one process writes a string termed “Hello There”; the second process reads the string and displays it on the screen converting all characters to upper case.  Hint:- Run the first process first and the second process next. Hint:-  Use POSIX shared memory API to create and use shared memory.
+ 
+ 
+4.      Show the implementation of  the first reader – writer  problem using pthread  mutex. Create 2 reader threads and one writer thread. One reader thread reads the file and  displays the characters , each one as a lower case on the screen. The other  reader thread too reads the file and  displays the characters , each one as a upper  case on the screen. The  writer thread should append a string termed “hello”  to the end of the file.  Execute the program and observe the result.
+ 
+5.      Implement the producer-consumer problem using a circular buffer. Implement the  critical section using pthread  mutex’s. Run the program and observe the result.
+ 
+6.      Write a program which is a modification of  the above question   by also providing a common counter for the producer and consumer, which tracks the total number of items in the buffer. Display it everytime the producer thread  or the  consumer executes.
+ 
+7. Implement the FCFS scheduling algorithm.  Read the number of processes and  their burst times . Assume that they all arrive at time zero.  Output the AVG. waiting time and AVG. turn around time  of each process.
+ 
+8.      Implement the Round Robin  scheduling algorithm.  Read the number of processes, time slice  and  their burst times . Assume that they all arrive at time zero.  Output the AVG. waiting time and AVG. turn around time  of each process.
+ 
+9.      Implement the SJF  scheduling algorithms.  Read the number of processes and  their burst times . Assume that they all arrive at time zero.  Output the AVG. waiting time and AVG. turn around time  of each process.
+ 
+10. Implement the Priority scheduling algorithms.  Read the number of processes, their priorities  and  their burst times . Assume that they all arrive at time zero.  Output the AVG. waiting time and AVG. turn around time  of each process.
